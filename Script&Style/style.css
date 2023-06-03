@@ -1,5 +1,7 @@
 :root {
     --color-A: rgb(251, 220, 212); /* #fbdcd4 */
+
+    --sirina-desktop: 1010px;
 }
 
 *{
@@ -105,6 +107,31 @@ header{
     background-color: var(--color-A);
 }
 
+/* NAZAD NA VRH DUGME */
+
+#nazad-na-vrh {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    z-index: 99;
+    outline: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    border: none;
+    border-radius: 50px;
+    font-size: 2em;
+}
+  
+#nazad-na-vrh:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
 /* FOOTER */
 
 footer{
@@ -114,6 +141,7 @@ footer{
 }
 
 #footer{
+    max-width: var(--sirina-desktop);
     min-height: 450px;
     width: 75%;
     padding: 5px 10px;
