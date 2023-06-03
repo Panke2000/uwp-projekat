@@ -1,4 +1,4 @@
-::root {
+:root {
     --color-A: rgb(251, 220, 212); /* #fbdcd4 */
 }
 
@@ -10,7 +10,7 @@
 }
 
 body {
-
+    background-color: var(--color-A);
 }
 
 .container {
@@ -26,7 +26,7 @@ header{
     top: 0;
     width: 100%;
     z-index: 99;
-    background-color: #fbdcd4;
+    background-color: var(--color-A);
     transition: background-color 500ms;
 }
 
@@ -58,7 +58,7 @@ header{
 
 #header-links a{
     text-decoration: none;
-    background-color: #fbdcd4;
+    background-color: var(--color-A);
     transition: background-color 500ms;
     color: black;
     border: 2px solid black;
@@ -102,7 +102,7 @@ header{
 #page-body{
     margin-top: 70px;
     min-height: 1000px;
-    background-color: #fbdcd4;
+    background-color: var(--color-A);
 }
 
 /* FOOTER */
@@ -133,7 +133,7 @@ footer{
     opacity: 33%;
 }
 
-#footer-left-column, #footer-right-column{
+#footer-left-top, #footer-right-bottom{
     display: inline-block;
 
     width: 49%;
@@ -144,12 +144,12 @@ footer{
     text-align: center;
 }
 
-#footer-left-column {
+#footer-left-top {
 
     /*background-color: lightblue;*/
 }
 
-#footer-right-column {
+#footer-right-bottom {
     /*background-color: lightpink;*/
 
 }
@@ -165,13 +165,7 @@ footer{
 
 @media (max-width: 768px) {
 
-    #header-logo{
-        display: none;
-    }
-
-    #header-logo-mobile{
-        display: inline-block;
-    }
+    
 
     #header-links {
         display: none; /* Hide the header links on smaller screens */
@@ -179,6 +173,7 @@ footer{
 
     #hamburger-menu {
         display: flex; /* Show the hamburger menu on smaller screens */
+        width: 100%;
     }
 
     #page-body {
@@ -186,12 +181,24 @@ footer{
     }
 
     /* Adjust header logo for smaller screens */
-    #header-logo {
-        width: 220px;
+    #header-logo{
+        display: none;
+    }
+    
+    #header-logo-mobile{
+        display: flex;
     }
 
     /* Adjust hamburger menu icon styles */
     .line {
         background-color: white;
+        height: 50px;
+    }
+
+    #footer-left-top, #footer-right-bottom{
+        display: block;
+        width: 100%;
     }
 }
+
+

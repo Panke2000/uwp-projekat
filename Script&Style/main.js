@@ -22,11 +22,11 @@ window.addEventListener('scroll', function() {
             element.style.color = 'black';
         });
     } else {
-        header.style.backgroundColor = '#fbdcd4';
+        header.style.backgroundColor = 'var(--color-A)';
         header.style.borderBottom = 'none';
         header.style.boxShadow = 'none'
         headerLinks.forEach(element => {
-            element.style.backgroundColor = '#fbdcd4';
+            element.style.backgroundColor = 'var(--color-A)';
             element.style.borderColor = 'black';
             element.style.color = 'black';
         });
