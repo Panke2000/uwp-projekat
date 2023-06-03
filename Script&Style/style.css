@@ -1,3 +1,7 @@
+::root {
+    --color-A: rgb(251, 220, 212); /* #fbdcd4 */
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +10,7 @@
 }
 
 body {
-    
+
 }
 
 .container {
@@ -22,13 +26,14 @@ header{
     top: 0;
     width: 100%;
     z-index: 99;
+    background-color: #fbdcd4;
+    transition: background-color 500ms;
 }
 
 #header {
     justify-content: center;
     align-items: center;
     padding: 5px 0 5px 0;
-    border-bottom: 1px solid black;
 }
 #header-logo #header-links{
     display: inline-block;
@@ -53,6 +58,8 @@ header{
 
 #header-links a{
     text-decoration: none;
+    background-color: #fbdcd4;
+    transition: background-color 500ms;
     color: black;
     border: 2px solid black;
     
@@ -64,46 +71,63 @@ header{
     margin-left: 5px;
 }
 
+#header-links a:hover {
+    background-color: white;
+}
+
 /* PAGE BODY */
 
 #page-body{
-    margin-top: 71px;
+    margin-top: 70px;
     min-height: 1000px;
-    background-color: aquamarine;
+    background-color: #fbdcd4;
 }
 
 /* FOOTER */
 
 footer{
     min-height: 500px;
+    /*background-image: linear-gradient(to bottom, #fbdcd4, #fcd6cc, #fdd0c3, #fec9bb, #ffc3b3);*/
 
-    border-top: 1px solid black;
+    /*background-image: linear-gradient(to bottom, #fbdcd4, #fdd3c8, #fec9bb, #ffc0af, #ffb6a3);*/
+
+    /*background-image: linear-gradient(to bottom, #fbdcd4, #fdcfc2, #ffc1b1, #ffb49f, #ffa68e);*/ /* good */
+
+    /*background-image: linear-gradient(to bottom, #fbdcd4, #fec8bd, #ffb4a9, #ff9e97, #ff8888);*/ /* better */
+
+    background-image: linear-gradient(to bottom, #fbdcd4, #efb5bb, #d792b4, #ab76b9, #5c66be);
 }
 
 #footer{
     min-height: 450px;
     width: 75%;
-
-    border: 1px dotted black;
+    padding: 5px 10px;
+    background-color: white;
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 
 #footer hr {
     min-height: 425px;
+    opacity: 33%;
 }
 
 #footer-left-column, #footer-right-column{
     display: inline-block;
+
     width: 49%;
     min-height: 425px;
+
+    padding: 5px;
+
     text-align: center;
 }
 
 #footer-left-column {
 
-    background-color: lightblue;
+    /*background-color: lightblue;*/
 }
 
 #footer-right-column {
-    background-color: lightpink;
+    /*background-color: lightpink;*/
 
 }
