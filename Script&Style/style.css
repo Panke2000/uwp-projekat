@@ -109,13 +109,6 @@ header{
 
 footer{
     min-height: 500px;
-    /*background-image: linear-gradient(to bottom, #fbdcd4, #fcd6cc, #fdd0c3, #fec9bb, #ffc3b3);*/
-
-    /*background-image: linear-gradient(to bottom, #fbdcd4, #fdd3c8, #fec9bb, #ffc0af, #ffb6a3);*/
-
-    /*background-image: linear-gradient(to bottom, #fbdcd4, #fdcfc2, #ffc1b1, #ffb49f, #ffa68e);*/ /* good */
-
-    /*background-image: linear-gradient(to bottom, #fbdcd4, #fec8bd, #ffb4a9, #ff9e97, #ff8888);*/ /* better */
 
     background-image: linear-gradient(to bottom, #fbdcd4, #efb5bb, #d792b4, #ab76b9, #5c66be);
 }
@@ -139,7 +132,7 @@ footer{
     width: 49%;
     min-height: 425px;
 
-    padding: 5px;
+    padding: 15px;
 
     text-align: center;
 }
@@ -152,6 +145,66 @@ footer{
 #footer-right-bottom {
     /*background-color: lightpink;*/
 
+}
+
+.footer-sm-icons {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px 0 10px;
+}
+
+.footer-sm-icons img:hover{
+    cursor: pointer;
+}
+
+.footer-sm-icons:first-of-type {
+    margin-left: 0;
+}
+
+.footer-sm-icons:last-of-type {
+    margin-right: 0;
+}
+
+#footer-adresa {
+    margin-top: 10px;
+    font-family: cursive;
+    font-size: 1.5em;
+}
+
+#footer-adresa-naziv{
+    font-weight: bold;
+}
+
+#footer-adresa-map{
+    margin-top: 10px;
+}
+
+#footer-email, #footer-telefon {
+    font-family: cursive;
+    font-size: 1.5em;
+}
+
+#footer-email{
+    margin-top: 20px;
+}
+
+#footer-email a, #footer-telefon a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #5c66be;
+}
+#footer-telefon a{
+    letter-spacing: 1px;
+}
+
+#info{
+    margin-top: 50px;
+    font-size: large;
+}
+
+#copyright{
+    margin-top: 125px;
 }
 
 .show {
