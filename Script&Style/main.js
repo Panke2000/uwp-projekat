@@ -1,8 +1,15 @@
 /* HEADER */
 
 let headerLinks = this.document.querySelectorAll('#header-links a');
+let hamburgerMenu = document.querySelector('#hamburger-menu');
+let lines = document.querySelectorAll('.line');
 
 console.log(headerLinks);
+
+hamburgerMenu.addEventListener('click', function() {
+    headerLinks.classList.toggle('show');
+    lines.forEach(line => line.classList.toggle('active'));
+});
 
 window.addEventListener('scroll', function() {
     let header = this.document.querySelector('header');
@@ -45,3 +52,5 @@ headerLinks.forEach(link => {
           }
     });
   });
+
+  

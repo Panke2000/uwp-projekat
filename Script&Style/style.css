@@ -75,6 +75,28 @@ header{
     background-color: white;
 }
 
+#header-logo-mobile {
+    display: none;
+    cursor: pointer;
+}
+#header-logo-mobile img{
+    height: 50px;
+
+}
+
+#hamburger-meni {
+    display: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.hamburger-link {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+}
+
 /* PAGE BODY */
 
 #page-body{
@@ -130,4 +152,46 @@ footer{
 #footer-right-column {
     /*background-color: lightpink;*/
 
+}
+
+.show {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.active {
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+
+    #header-logo{
+        display: none;
+    }
+
+    #header-logo-mobile{
+        display: inline-block;
+    }
+
+    #header-links {
+        display: none; /* Hide the header links on smaller screens */
+    }
+
+    #hamburger-menu {
+        display: flex; /* Show the hamburger menu on smaller screens */
+    }
+
+    #page-body {
+        margin-top: 50px; /* Adjust the margin to make space for the fixed header */
+    }
+
+    /* Adjust header logo for smaller screens */
+    #header-logo {
+        width: 220px;
+    }
+
+    /* Adjust hamburger menu icon styles */
+    .line {
+        background-color: white;
+    }
 }
