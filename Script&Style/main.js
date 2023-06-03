@@ -87,7 +87,7 @@ function naVrh() {
 /*  FOOTER  */
 
 window.addEventListener('scroll', function() {
-  if (window.scrollY > ((pageBody.offsetHeight - 500) - (footer.offsetHeight))) {
+  if (window.scrollY > ((pageBody.offsetHeight - 300) - (footer.offsetHeight))) {
     footer.style.visibility = 'visible';
     footer.style.opacity = '1';
   } else {

@@ -102,9 +102,47 @@ header{
 /* PAGE BODY */
 
 #page-body{
-    margin-top: 70px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     min-height: 1000px;
+    margin-top: 70px;
     background-color: var(--color-A);
+}
+
+.body-container{
+    display: inline-block;
+    min-width: 250px;
+    max-width: 1010px;
+    min-height: 250px;
+    margin: 10px;
+    text-align: center;
+
+    background-color: white;
+    border: 2px solid black;
+}
+
+.cont-row{
+    display: block;
+}
+
+#index-cont-main{
+    display: block;
+}
+
+#index-cont-main img {
+    z-index: 0;
+    position: relative;
+    width: 350px;
+    left: 370px;
+    bottom: -15px;
+}
+
+#index-cont-1 {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    margin: 0;
 }
 
 /* NAZAD NA VRH DUGME */
@@ -136,14 +174,23 @@ header{
 
 footer{
     min-height: 500px;
+    padding-bottom: 100px;
 
-    background-image: linear-gradient(to bottom, #fbdcd4, #efb5bb, #d792b4, #ab76b9, #5c66be);
+    background: hsla(12, 83%, 91%, 1);
+
+    background: linear-gradient(270deg, hsla(12, 83%, 91%, 1) 0%, hsla(255, 27%, 71%, 1) 67%, hsla(243, 33%, 66%, 1) 88%, hsla(238, 39%, 61%, 1) 98%, hsla(234, 43%, 55%, 1) 100%);
+
+    background: -moz-linear-gradient(270deg, hsla(12, 83%, 91%, 1) 0%, hsla(255, 27%, 71%, 1) 67%, hsla(243, 33%, 66%, 1) 88%, hsla(238, 39%, 61%, 1) 98%, hsla(234, 43%, 55%, 1) 100%);
+
+    background: -webkit-linear-gradient(270deg, hsla(12, 83%, 91%, 1) 0%, hsla(255, 27%, 71%, 1) 67%, hsla(243, 33%, 66%, 1) 88%, hsla(238, 39%, 61%, 1) 98%, hsla(234, 43%, 55%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FBDCD4", endColorstr="#ABA1C9", GradientType=1 );
 }
 
 #footer{
     visibility: hidden;
     opacity: 0;
-    transition: visibility 3s, opacity 2s linear;
+    transition: visibility 1s, opacity 1s linear;
     max-width: var(--sirina-desktop);
     min-height: 450px;
     width: 75%;
