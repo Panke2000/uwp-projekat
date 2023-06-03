@@ -4,6 +4,8 @@ let headerLinks = document.querySelectorAll('#header-links a');
 let hamburgerMenu = document.querySelector('#hamburger-menu');
 let lines = document.querySelectorAll('.line');
 let dugmeNaVrh = document.getElementById("nazad-na-vrh"); // nazad na vrh dugme
+let footer = document.getElementById('footer'); // futer
+let pageBody = document.getElementById('page-body');
 
 console.log(headerLinks);
 
@@ -79,4 +81,17 @@ function naVrh() {
 }
 
 
-  
+
+
+
+/*  FOOTER  */
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > ((pageBody.offsetHeight - 500) - (footer.offsetHeight))) {
+    footer.style.visibility = 'visible';
+    footer.style.opacity = '1';
+  } else {
+    footer.style.visibility = 'hidden';
+    footer.style.opacity = '0';
+  }
+});
