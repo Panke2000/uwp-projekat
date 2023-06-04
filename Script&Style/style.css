@@ -210,6 +210,9 @@ header{
     padding: 60px;
     border: none;
     box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+    font-size: 1.25em;
+    background-image: url('../Materijal/beauty-salon-pattern-desktop-15.png');
+    background-size: 200px;
 }
 
 
@@ -228,6 +231,7 @@ header{
 
 #cenovnik-cont-1 {
     align-items: center;
+    margin-top: 50px;
     background-color: inherit;
     border: none;
 }
