@@ -2,6 +2,8 @@
     --color-A: rgb(251, 220, 212); /* #fbdcd4 */
 
     --sirina-desktop: 1010px;
+
+    --sirina-mobile: 300px;;
 }
 
 *{
@@ -269,6 +271,7 @@ header{
 #cenovnik-cont-1 table{
     width: 100%;
     background-color: white;
+    background-image: url('../Materijal/beli-papir.jpg');
     border: 1px solid black;
     border-collapse: collapse;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
@@ -329,6 +332,110 @@ header{
     width: 75px;
 }
 
+/* tretmani.html */
+
+[id^='tretmani-row-'] {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+[id^='tretmani-row-'] img {
+    object-fit: cover;
+    width: 290px;
+    height: 250px;
+    margin: 5px;
+    border: 2px solid black;
+}
+
+[id^='tretmani-cont-'] {
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+    width: 707px;
+    margin: 5px;
+    font-size: 1.5em;
+}
+
+[id^='tretmani-row-']:nth-of-type(odd){
+    /*background-color: greenyellow;*/
+}
+
+[id^='tretmani-row-']:nth-of-type(even){
+    /*background-color: red;*/
+}
+
+/* galerija.html */
+
+[id^='galerija-row-'] {
+    width: var(--sirina-desktop);
+}
+
+[id^='galerija-row-'] img {
+    object-fit: cover;
+    width: 500px;
+    height: 350px;
+    margin: 2px 0;
+    border: 5px solid white;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+[id^='galerija-row-'] img:nth-last-of-type(even) {
+    margin-left: 2px;
+}
+
+/* o-nama.html */
+
+#o-nama-kartica {
+    display: flex;
+    width: var(--sirina-desktop);
+    flex-direction: column;
+}
+
+#slika-info {
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+#o-nama-slika {
+    width: 250px;
+}
+
+#o-nama-slika img {
+    height: 200px;
+}
+
+#o-nama-info {
+    display: inherit;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+#o-nama-info h3 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#o-nama-info h3:last-of-type{
+    margin-bottom: 0;
+}
+
+#o-nama-info h3 span {
+    font-weight: bolder;
+    color: #5c66be;
+}
+
+#bio {
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 500px;
+}
+
 /* NAZAD NA VRH DUGME */
 
 #nazad-na-vrh {
@@ -380,7 +487,7 @@ footer{
     min-height: 450px;
     width: 100%;
     padding: 5px 10px;
-    background-color: white;
+    background-image: url('../Materijal/beli-papir.jpg');
     box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 
@@ -486,40 +593,69 @@ footer{
 
 @media (max-width: 768px) {
 
-    
-
-    #header-links {
-        display: none; /* Hide the header links on smaller screens */
+    #nazad-na-vrh {
+        right: 10px;
     }
 
-    #hamburger-menu {
-        display: flex; /* Show the hamburger menu on smaller screens */
-        width: 100%;
-    }
-
-    #page-body {
-        margin-top: 50px; /* Adjust the margin to make space for the fixed header */
-    }
-
-    /* Adjust header logo for smaller screens */
-    #header-logo{
+    #header-logo {
         display: none;
     }
-    
-    #header-logo-mobile{
-        display: flex;
-    }
-
-    /* Adjust hamburger menu icon styles */
-    .line {
-        background-color: white;
-        height: 50px;
-    }
-
-    #footer-left-top, #footer-right-bottom{
+    #header-logo-mobile {
         display: block;
-        width: 100%;
     }
+
+    #page-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: normal;
+    }
+
+    /**/
+
+    #index-cont-main {
+        width: var(--sirina-mobile);
+    }
+
+    #index-main-pic {
+        display: none;
+    }
+
+    #index-cont-1-info {
+        display: none;
+    }
+
+    #index-cont-1-buttons {
+        flex-direction: column;
+    }
+
+    #index-cont-1-buttons button {
+        margin-top: 10px;
+    }
+
+    #index-cont-1 {
+        margin-top: 50px;
+        width: var(--sirina-mobile);
+    }
+    #index-row-1 {
+        width: var(--sirina-mobile);
+        flex-direction: column;
+    }
+    #index-cont-2, #index-cont-3 {
+        min-width: var(--sirina-mobile);
+        font-size: 1em;
+    }
+
+    #index-cont-3 img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #footer-left-top, #footer-right-bottom {
+        width: 100%;
+        display: block;
+    }
+
 }
 
 
