@@ -1,18 +1,12 @@
 /* HEADER */
 
 let headerLinks = document.querySelectorAll('#header-links a');
-let hamburgerMenu = document.querySelector('#hamburger-menu');
 let lines = document.querySelectorAll('.line');
 let dugmeNaVrh = document.getElementById("nazad-na-vrh"); // nazad na vrh dugme
 let footer = document.getElementById('footer'); // futer
 let pageBody = document.getElementById('page-body');
 
 console.log(headerLinks);
-
-hamburgerMenu.addEventListener('click', function() {
-    headerLinks.classList.toggle('show');
-    lines.forEach(line => line.classList.toggle('active'));
-});
 
 window.addEventListener('scroll', function() {
     let header = document.querySelector('header'); // header animacija

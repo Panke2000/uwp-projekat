@@ -58,7 +58,11 @@ header{
     /*background-color: red;*/
 }
 
-#header-links a{
+#hamburger-button{
+    display: none;
+}
+
+#header-links a, #hamburger-button{
     text-decoration: none;
     background-color: var(--color-A);
     transition: background-color 500ms;
@@ -73,7 +77,7 @@ header{
     margin-left: 5px;
 }
 
-#header-links a:hover {
+#header-links a:hover{
     background-color: white;
 }
 
@@ -86,23 +90,10 @@ header{
 
 }
 
-#hamburger-meni {
-    display: none;
-    cursor: pointer;
-    margin-left: 10px;
-}
-
-.hamburger-link {
-    width: 25px;
-    height: 3px;
-    background-color: black;
-    margin: 5px 0;
-}
-
 /* PAGE BODY */
 
 #page-body{
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-direction: column;
     min-height: 1000px;
@@ -111,7 +102,7 @@ header{
 }
 
 .body-container{
-    display: inline-block;
+    display: flex;
     min-width: 250px;
     max-width: 1010px;
     min-height: 250px;
@@ -122,27 +113,53 @@ header{
     border: 2px solid black;
 }
 
-.cont-row{
-    display: block;
+#index-cont-1{
+    flex-direction: column;
+    padding: 15px;
 }
 
-#index-cont-main{
-    display: block;
+#index-cont-1 h3{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#index-cont-1 p {
+    font-size: larger;
+    margin-top: 15px;
+    line-height: 1.5em;
+}
+
+#index-cont-1 {
+}
+
+#index-cont-1 p > span {
 }
 
 #index-cont-main img {
     z-index: 0;
-    position: relative;
-    width: 350px;
-    left: 370px;
-    bottom: -15px;
 }
 
 #index-cont-1 {
     z-index: 1;
     position: relative;
-    width: 100%;
+    width: 1010px;
     margin: 0;
+}
+
+#index-row-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+
+    width: var(--sirina-desktop);
+}
+
+#index-row-1 > .body-container:first-of-type { margin-left: 0; justify-content: start;}
+#index-row-1 > .body-container:last-of-type { margin-right: 0; justify-content: end;}
+
+#index-cont-2, #index-cont-3, #index-cont-4 {
+    width: 250px;
 }
 
 /* NAZAD NA VRH DUGME */
@@ -173,6 +190,7 @@ header{
 /* FOOTER */
 
 footer{
+    width: 100%;
     min-height: 500px;
     padding-bottom: 100px;
 
