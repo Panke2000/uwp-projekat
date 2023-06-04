@@ -96,7 +96,8 @@ header{
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    min-height: 1000px;
+    min-height: 800px; /* remove 8 */
+    margin-top: 70px;
     margin-top: 70px;
     background-color: var(--color-A);
 }
@@ -112,6 +113,8 @@ header{
     background-color: white;
     border: 2px solid black;
 }
+
+/* index.html */
 
 #index-cont-1{
     flex-direction: column;
@@ -135,7 +138,38 @@ header{
 #index-cont-1 p > span {
 }
 
-#index-cont-main img {
+#index-cont-1-buttons {
+    display: inherit;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#index-cont-1-buttons button{
+    display: block;
+    cursor: pointer;
+    min-width: 50px;
+    min-height: 35px;
+    margin: 0 10px;
+    padding: 0 10px;
+    font-size: 1.25em;
+    background-color: #cfbeff;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+#index-cont-1-buttons button:hover {
+    background-color: black;
+    color: white;
+}
+
+#index-cont-1-info {
+    width: fit-content;
+    margin-left: 625px;
+    font-size: x-small;
+}
+
+#index-cont-main #index-main-pic {
     z-index: 0;
 }
 
@@ -160,6 +194,110 @@ header{
 
 #index-cont-2, #index-cont-3, #index-cont-4 {
     width: 250px;
+}
+
+/* cenovnik.html */
+
+#cenovnik-cont-main, #cenovnik-cont-1, #cenovnik-cont-2, #cenovnik-cont-3 {
+    flex-direction: column;
+    justify-content: center;
+    min-width: 500px;
+    width: 100%;
+    background-color: white;
+}
+
+#cenovnik-cont-main {
+    padding: 60px;
+    border: none;
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+
+#cenovnik-cont-main h3{
+    margin-top: 20px;
+}
+
+#zbir-akcija span{
+    display: block;
+    margin-top: 10px;
+}
+
+#zbir-akcija span:first-of-type {
+    margin-top: 20px;
+}
+
+#cenovnik-cont-1 {
+    align-items: center;
+    background-color: inherit;
+    border: none;
+}
+
+#cenovnik-cont-1 table{
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+    border-collapse: collapse;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    
+}
+
+#cenovnik-cont-1 table tr td{
+    padding: 12px 20px;
+    border-bottom: 1px solid black;
+    font-size: 1.2em;
+}
+
+#cenovnik-cont-1 thead {
+    font-weight: bold;
+}
+
+#cenovnik-cont-1 input {
+    cursor: pointer;
+    width: 78px;
+    height: 25px;
+    background-color: inherit;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+#cenovnik-cont-1 input:hover {
+    background-color: black;
+    color: white;
+}
+
+.dodato {
+    border-color: red;
+    background-color: red;
+    color: white;
+}
+
+#cenovnik-cont-racun {
+    z-index: 10;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    max-height: 50px;
+    background-color: #cfbeff;
+    font-size: 1.25em;
+}
+
+#cenovnik-cont-racun span {
+    font-weight: bold;
+}
+
+.cenovnik-naziv {
+    text-align: left;
+}
+
+.cenovnik-cena {
+    width: 175px;
+    text-align: right;
+}
+
+.cenovnik-dugme {
+    width: 75px;
 }
 
 /* NAZAD NA VRH DUGME */
@@ -211,7 +349,7 @@ footer{
     transition: visibility 1s, opacity 1s linear;
     max-width: var(--sirina-desktop);
     min-height: 450px;
-    width: 75%;
+    width: 100%;
     padding: 5px 10px;
     background-color: white;
     box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);

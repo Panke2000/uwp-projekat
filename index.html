@@ -22,7 +22,7 @@
             <div id="header-links">
                 <a href="#">Početna</a>
                 <a href="">Tretmani</a>
-                <a href="">Cenovnik</a>
+                <a href="Stranice/cenovnik.html">Cenovnik</a>
                 <a href="">Galerija</a>
                 <a href="">O Nama</a>
                 <a href="#footer">Kontakt</a>
@@ -31,14 +31,18 @@
     </header>
     <div id="page-body" class="container">
         <div id="index-cont-main" class="cont-row">
-            <img src="/Materijal/beauty-salon-building_wide-desktop.png" alt="">
+            <img id="index-main-pic" src="/Materijal/beauty-salon-building_wide-desktop.png" alt="">
             <div id="index-cont-1" class="body-container">
                 <h3>Dobrodosli na sajt salona Beaute!</h3>
                 <p>Kozmeticki salon Beaute je nosilac nagrada: <br>
                 <span id="nagrada-1">- "Najbolji kozmeticki salon na teritoriji juzne Srbije" </span><br>
                 <span id="nagrada-2">- "Profesionalno osoblje" za tri uzastopne godine </span><br>
                 <span id="nagrada-3">- "Manikir professional by Francais beaute"</span></p>
-                
+                <div id="index-cont-1-buttons">
+                    <button>Zainteresovani da pogledate galeriju nasih radova?</button>
+                    <button>...ili da zakazete termin?</button>
+                </div>
+                <p id="index-cont-1-info">Pretisnite na taster inzad :)</p>
             </div>
         </div>
         <div id="index-row-1" class="cont-row">
@@ -48,9 +52,6 @@
             <div id="index-cont-3" class="body-container">
     
             </div>
-            <div id="index-cont-4" class="body-container">
-        </div>
-
         </div>
     </div>
     <button onclick="naVrh()" id="nazad-na-vrh" title="Nazad na vrh">&#8593</button>
@@ -92,5 +93,6 @@
         </div>
     </footer>
     <script src="Script&Style/main.js"></script>
+    <script src="Script&Style/index.js"></script>
 </body>
 </html>
