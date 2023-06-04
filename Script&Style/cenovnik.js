@@ -34,10 +34,60 @@ for (let i = 0; i < zbir.length; i+=2) {
         cena*=0.75;
         /*console.log(cena);*/
         span.innerHTML = cena;
-        span.style.color = 'red';
+        span.parentNode.style.color = 'red';
         naziv.style.color = 'red';
 
 
     }
     
 }
+
+let prikazIznosa = document.getElementById('cenovnik-cont-racun');
+
+document.addEventListener('click', (e) => {
+    /*console.log(e.target);*/
+    let cena = iznos.innerHTML;
+    let cenaSpan = e.target.parentNode.parentNode.childNodes[3].childNodes[0].innerHTML;
+    /*console.log(cena);*/
+
+    console.log(e.target.nodeName === 'A');
+
+    if (e.target.value === 'DODAJ') {
+
+        
+        cenaSpan = parseInt(cenaSpan);
+        cena = parseInt(cena);
+        cena+=cenaSpan;
+        iznos.innerHTML = cena;
+
+        e.target.value = 'ODUZMI';
+        e.target.style.backgroundColor = 'black';
+        e.target.style.color = 'white';
+
+        if ( prikazIznosa.classList.contains('hide') ) {
+            prikazIznosa.classList.remove('hide');
+        }
+
+    } else if (e.target.value === 'ODUZMI') {
+
+        cenaSpan = parseInt(cenaSpan);
+        cena = parseInt(cena);
+        cena-=cenaSpan;
+        iznos.innerHTML = cena;
+
+        e.target.value = 'DODAJ';
+        e.target.style.backgroundColor = 'white';
+        e.target.style.color = 'black';
+
+        if ( cena === 0 ) {
+            prikazIznosa.classList.add('hide');
+        }
+
+    } else if (e.target.nodeName === 'A') { 
+        return;
+        
+    } else {
+        alert('DOSLO JE DO GRESKE!');
+    }
+
+});

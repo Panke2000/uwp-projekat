@@ -114,6 +114,10 @@ header{
     border: 2px solid black;
 }
 
+.hide {
+    display: none;
+}
+
 /* index.html */
 
 #index-cont-1{
@@ -132,9 +136,6 @@ header{
     line-height: 1.5em;
 }
 
-#index-cont-1 {
-}
-
 #index-cont-1 p > span {
 }
 
@@ -145,8 +146,7 @@ header{
     margin-top: 10px;
 }
 
-#index-cont-1-buttons button{
-    display: block;
+#index-cont-1-buttons button, #index-cont-2 input{
     cursor: pointer;
     min-width: 50px;
     min-height: 35px;
@@ -158,14 +158,14 @@ header{
     border-radius: 25px;
 }
 
-#index-cont-1-buttons button:hover {
+#index-cont-1-buttons button:hover, #index-cont-2 input:hover {
     background-color: black;
     color: white;
 }
 
 #index-cont-1-info {
     width: fit-content;
-    margin-left: 625px;
+    margin-left: 642px;
     font-size: x-small;
 }
 
@@ -183,17 +183,30 @@ header{
 #index-row-1 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: 10px;
 
     width: var(--sirina-desktop);
 }
 
-#index-row-1 > .body-container:first-of-type { margin-left: 0; justify-content: start;}
-#index-row-1 > .body-container:last-of-type { margin-right: 0; justify-content: end;}
+
+
+#index-row-1 > .body-container:first-of-type { margin-left: 0;}
+#index-row-1 > .body-container:last-of-type { margin-right: 0;}
 
 #index-cont-2, #index-cont-3, #index-cont-4 {
     width: 250px;
+}
+
+#index-cont-2, #index-cont-3 {
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-width: calc((var(--sirina-desktop) / 2) - 10px);
+    padding: 20px;
+}
+
+#index-cont-2 p {
+    font-size: 1.25em;
 }
 
 /* cenovnik.html */
@@ -260,18 +273,13 @@ header{
     width: 78px;
     height: 25px;
     background-color: inherit;
+    color: inherit;
     border: 2px solid black;
     font-weight: bold;
 }
 
 #cenovnik-cont-1 input:hover {
     background-color: black;
-    color: white;
-}
-
-.dodato {
-    border-color: red;
-    background-color: red;
     color: white;
 }
 
@@ -432,6 +440,11 @@ footer{
     font-family: sans-serif;
     color: #5c66be;
 }
+
+#footer-email a:hover, #footer-telefon a:hover {
+    color: black;
+}
+
 #footer-telefon a{
     letter-spacing: 1px;
 }
