@@ -480,6 +480,7 @@ footer{
 }
 
 #footer{
+    display: flex;
     visibility: hidden;
     opacity: 0;
     transition: visibility 1s, opacity 1s linear;
@@ -497,7 +498,6 @@ footer{
 }
 
 #footer-left-top, #footer-right-bottom{
-    display: inline-block;
 
     width: 49%;
     min-height: 425px;
@@ -646,9 +646,23 @@ footer{
         font-size: 1em;
     }
 
+    #index-cont-3 {
+        margin-left: 0;
+    }
+
     #index-cont-3 img {
         width: 100px;
         height: 100px;
+    }
+
+    footer {
+        padding-bottom: 0;
+    }
+    #footer {
+        flex-direction: column;
+    }
+    #footer hr {
+        display: none;
     }
 
     #footer-left-top, #footer-right-bottom {
