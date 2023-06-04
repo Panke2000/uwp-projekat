@@ -209,6 +209,23 @@ header{
     font-size: 1.25em;
 }
 
+#index-cont-3 {
+    flex-direction: row;
+}
+
+#index-cont-3 div {
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 10px;
+    padding-right: 40px;
+}
+
+#index-cont-3 img {
+    width: 250px;
+    border: inherit;
+}
+
 /* cenovnik.html */
 
 #cenovnik-cont-main, #cenovnik-cont-1, #cenovnik-cont-2, #cenovnik-cont-3 {
