@@ -635,6 +635,8 @@ footer{
 
     #index-cont-1 {
         margin-top: 50px;
+        height: 500px;
+        justify-content: center;
         width: var(--sirina-mobile);
     }
     #index-row-1 {
